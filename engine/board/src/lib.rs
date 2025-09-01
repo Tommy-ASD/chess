@@ -32,6 +32,6 @@ pub struct Board {
 
 impl Board {
     fn get_cell_at(&self, coord: &Coordinate) -> Option<&Cell> {
-    self.cells.iter().find(|cell| cell.coord == &coord)
+        self.cells.iter().find(|cell| &cell.coord == coord)
     }
 }
